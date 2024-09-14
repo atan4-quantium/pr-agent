@@ -45,7 +45,7 @@ class PRDescription:
             get_settings().pr_description.enable_semantic_files_types = False
 
         # Initialize the AI handler
-        self.ai_handler = ai_handler()
+        self.ai_handler = ai_handler
         self.ai_handler.main_pr_language = self.main_pr_language
 
         # Initialize the variables dictionary
