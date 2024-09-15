@@ -37,8 +37,8 @@ async def run_action():
     OPENAI_KEY = os.environ.get('OPENAI_KEY') or os.environ.get('OPENAI.KEY')
     OPENAI_ORG = os.environ.get('OPENAI_ORG') or os.environ.get('OPENAI.ORG')
     GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
-    VERTEX_PROJECT = os.environ.get('VERTEX_PROJECT')
-    VERTEX_LOCATION = os.environ.get('VERTEX_LOCATION')
+    # VERTEX_PROJECT = os.environ.get('VERTEX_PROJECT')
+    # VERTEX_LOCATION = os.environ.get('VERTEX_LOCATION')
     # get_settings().set("CONFIG.PUBLISH_OUTPUT_PROGRESS", False)
 
     # Check if required environment variables are set
@@ -61,9 +61,9 @@ async def run_action():
     if OPENAI_ORG:
         get_settings().set("OPENAI.ORG", OPENAI_ORG)
         
-    if VERTEX_PROJECT:
-        get_settings().set("VERTEXAI.VERTEX_PROJECT", VERTEX_PROJECT)
-        get_settings().set("VERTEXAI.VERTEX_LOCATION", VERTEX_LOCATION)
+    # if VERTEX_PROJECT:
+    #     get_settings().set("VERTEXAI.VERTEX_PROJECT", VERTEX_PROJECT)
+    #     get_settings().set("VERTEXAI.VERTEX_LOCATION", VERTEX_LOCATION)
 
     get_settings().set("GITHUB.USER_TOKEN", GITHUB_TOKEN)
     get_settings().set("GITHUB.DEPLOYMENT_TYPE", "user")
